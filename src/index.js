@@ -37,5 +37,8 @@ airgram.use((ctx, next) => {
 // Getting new messages
 airgram.on('updateNewMessage', async ({ update }) => {
   const { message } = update;
-  console.log('[new message]', message);
+
+  if (message.chatId.toString() === process.env.TRACKED_CHAT_ID) {
+    console.log('[new message]', message.content.text);
+  }
 });

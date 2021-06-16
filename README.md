@@ -8,3 +8,7 @@
 - Update `.env` with your parameters
 - Run `yarn`
 - Run `yarn dev`
+
+## How to get chatId
+
+Send channel name to `https://t.me/username_to_id_bot`
