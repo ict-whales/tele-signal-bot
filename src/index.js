@@ -1,4 +1,5 @@
 const { Airgram, Auth, prompt, toObject } = require('airgram');
+const { parseMessage } = require('./parser');
 
 const airgram = new Airgram({
   apiId: process.env.APP_ID,
@@ -39,6 +40,12 @@ airgram.on('updateNewMessage', async ({ update }) => {
   const { message } = update;
 
   if (message.chatId.toString() === process.env.TRACKED_CHAT_ID) {
-    console.log('[new message]', message.content.text);
+    console.log('[new message]', message.content.text.text);
+
+    const data = parseMessage(message.content.text.text);
+
+    if (data) {
+      console.log('data', data);
+    }
   }
 });
