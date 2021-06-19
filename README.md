@@ -12,3 +12,8 @@
 ## How to get chatId
 
 Send channel name to `https://t.me/username_to_id_bot`
+
+## How to run on server
+
+- Run `npm i -g pm2`
+- Run `pm2 start npm --name "my-bot" -- run start`

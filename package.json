@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "DEBUG=airgram* dotenv -e .env nodemon --config nodemon.json",
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=airgram* dotenv -e .env node src/index.js"
   },
   "keywords": [],
   "author": "",
