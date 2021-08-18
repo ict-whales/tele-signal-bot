@@ -1,4 +1,5 @@
 const { Airgram, Auth, prompt, toObject } = require('airgram');
+const { initBinanceFutureInstance } = require('./init');
 const { parseMessage } = require('./parser');
 
 const airgram = new Airgram({
@@ -7,6 +8,8 @@ const airgram = new Airgram({
   command: process.env.TDLIB_COMMAND,
   logVerbosityLevel: 1,
 });
+
+initBinanceFutureInstance();
 
 airgram.use(
   new Auth({
