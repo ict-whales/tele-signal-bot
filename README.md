@@ -1,4 +1,4 @@
-# scalping-bot
+# tele-signal-bot
 
 ## Instruction
 
